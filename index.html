@@ -14,7 +14,7 @@ const no = ['Do not count on it', 'My reply is no', 'The stars say no', 'Outlook
 const totReplies = yes.concat(maybe,no);
 
 document.getElementById('answerButton').onclick = function () {
-let random = Math.floor(Math.random() * totReplies.length) === 20 ? 19 : Math.floor(Math.random() * totReplies.length);
+let random = Math.floor(Math.random() * totReplies.length);
 
 let response = random < yes.length ? yes[random] : (random < (maybe.length + yes.length) ? maybe[random - yes.length] : no[random - yes.length - maybe.length]);
 let color = random < yes.length ? "green" : (random < (maybe.length + yes.length) ? "orange" : "red");
